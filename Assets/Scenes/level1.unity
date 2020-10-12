@@ -2983,6 +2983,7 @@ GameObject:
   - component: {fileID: 777194914}
   - component: {fileID: 777194913}
   - component: {fileID: 777194912}
+  - component: {fileID: 777194915}
   m_Layer: 5
   m_Name: fire
   m_TagString: Untagged
@@ -3053,8 +3054,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1949754650}
-        m_MethodName: score_level1
+      - m_Target: {fileID: 777194915}
+        m_MethodName: score_level_1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3101,6 +3102,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777194910}
   m_CullTransparentMesh: 0
+--- !u!114 &777194915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777194910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1be8f57fa7635f40b479128a217f37f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalcoin: {fileID: 0}
+  scoore: 0
+  totalcoin_level1: {fileID: 1810754520}
 --- !u!1 &819512964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,17 +3655,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &897020736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3696,11 +3701,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 897020733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8571e814ad85c324d99bc450ece57371, type: 3}
+  m_Script: {fileID: 11500000, guid: a1be8f57fa7635f40b479128a217f37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoor: 10
   totalcoin: {fileID: 0}
+  scoore: 0
   totalcoin_level1: {fileID: 0}
 --- !u!1 &905420991
 GameObject:
@@ -10023,9 +10028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8571e814ad85c324d99bc450ece57371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoor: 0
-  totalcoin: {fileID: 0}
-  totalcoin_level1: {fileID: 1810754520}
 --- !u!1 &1966916480
 GameObject:
   m_ObjectHideFlags: 0

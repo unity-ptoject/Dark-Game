@@ -2884,11 +2884,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 757836622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d3dfc7ba507e14a958e471639789c7, type: 3}
+  m_Script: {fileID: 11500000, guid: ed3090bbe73ebec42811a661ba387013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoor: 0
   totalcoin: {fileID: 475323034}
+  scoore: 0
 --- !u!1 &773991336
 GameObject:
   m_ObjectHideFlags: 0
