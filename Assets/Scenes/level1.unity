@@ -3052,7 +3052,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 777194913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1949754650}
+        m_MethodName: score_level1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &777194913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3688,8 +3699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8571e814ad85c324d99bc450ece57371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu_Script: {fileID: 0}
-  coins: 4
+  scoor: 10
+  totalcoin: {fileID: 0}
   totalcoin_level1: {fileID: 0}
 --- !u!1 &905420991
 GameObject:
@@ -10012,8 +10023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8571e814ad85c324d99bc450ece57371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu_Script: {fileID: 0}
-  coins: 4
+  scoor: 0
+  totalcoin: {fileID: 0}
   totalcoin_level1: {fileID: 1810754520}
 --- !u!1 &1966916480
 GameObject:
