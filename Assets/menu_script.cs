@@ -32,14 +32,11 @@ score_game(); ////////////////// TEEEEEEEEEEEEST
 
 ///////////////////////////score the game 
 
-public int scoor = 33;
+public int scoor = 10;
 public TextMeshProUGUI totalcoin;
 public void score_game(){
     scoor++;
     Debug.Log("scoor : " + scoor);
     totalcoin.text = scoor.ToString();
-}
-public void test_call(){
-        Debug.Log("its working calling");
 }
 }
