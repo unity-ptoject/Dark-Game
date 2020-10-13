@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - enemy
+  - bullet
+  - slider_health_1
+  - slider_health_2
+  - slider_health_3
   layers:
   - Default
   - TransparentFX

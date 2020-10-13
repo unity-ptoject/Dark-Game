@@ -16,7 +16,7 @@ public class script_bullets : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) 
     {
 
-        if (other.gameObject.tag == "enemy") 
+        if (other.gameObject.tag == "enemy")                  ///// if bulllets touch enemy bullet will be distroy
         {
             Destroy(gameObject);
             Debug.Log("i tocuched enemy");
@@ -30,12 +30,12 @@ public class script_bullets : MonoBehaviour
     {
         if (timeRemaining > 0)
         {
-            timeRemaining -= Time.deltaTime;
-            Debug.Log("itimer : " + timeRemaining);
+            timeRemaining -= Time.deltaTime;  ////// timer counterdownd
+            Debug.Log("itimer : " + timeRemaining); 
         }
-        if (timeRemaining <= 0)
+        if (timeRemaining <= 0)                  ///// if timer == 0  the bullets will be destroy
         {
-             Destroy(gameObject);
+             Destroy(gameObject);                  
             Debug.Log("bullet is distroy withot touch enenmy");
         }
     }
