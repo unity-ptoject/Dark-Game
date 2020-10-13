@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class script_bullets : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 11f;
     public Rigidbody2D rb;
-    public int enemy_health = 0;
     void Start()
     {
         rb.velocity = transform.right * speed ;
@@ -20,10 +19,24 @@ public class script_bullets : MonoBehaviour
         if (other.gameObject.tag == "enemy") 
         {
             Destroy(gameObject);
-           // Destroy(other.gameObject);
-             enemy_health++;
-           Debug.Log("enemy dead : " +  enemy_health);
+            Debug.Log("i tocuched enemy");
+
         }
     }
 
+    public float timeRemaining = 1;
+
+    void Update()
+    {
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+            Debug.Log("itimer : " + timeRemaining);
+        }
+        if (timeRemaining <= 0)
+        {
+             Destroy(gameObject);
+            Debug.Log("bullet is distroy withot touch enenmy");
+        }
+    }
 }
