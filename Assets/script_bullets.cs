@@ -6,7 +6,7 @@ public class script_bullets : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-    public int enemy_dead = 3;
+    public int enemy_health = 0;
     void Start()
     {
         rb.velocity = transform.right * speed ;
@@ -19,14 +19,11 @@ public class script_bullets : MonoBehaviour
 
         if (other.gameObject.tag == "enemy") 
         {
-            if(enemy_dead > 0)
-            {
-                enemy_dead--;
-                Destroy(other.gameObject);
-                Debug.Log(" u killer enemy");
-            }
-
+            Destroy(gameObject);
+           // Destroy(other.gameObject);
+             enemy_health++;
+           Debug.Log("enemy dead : " +  enemy_health);
         }
-
     }
+
 }
