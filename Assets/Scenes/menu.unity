@@ -2887,8 +2887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3090bbe73ebec42811a661ba387013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalcoin: {fileID: 475323034}
-  scoore: 0
+  totalcoin_menu: {fileID: 475323034}
+  total: 0
 --- !u!1 &773991336
 GameObject:
   m_ObjectHideFlags: 0

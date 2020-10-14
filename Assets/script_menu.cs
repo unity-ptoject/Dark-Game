@@ -18,11 +18,11 @@ public void exitgame(){
 }
 
 
-    public TextMeshProUGUI totalcoin;
+    public TextMeshProUGUI totalcoin_menu;
     public static int scoore = 0;
     public void score_game(){
         Debug.Log("scoor :" + scoore);
-        totalcoin.text = scoore.ToString(); /// score menu
+        totalcoin_menu.text = scoore.ToString(); /// score menu
     }
     public int total = scoore; /// all score in menu
 

@@ -8,15 +8,16 @@ using TMPro;
 public class script_level_1 : script_menu
 {
 
-    private void Update() {
+  /*  private void Update() {
         totalcoin_level1.text = total.ToString();
     }
+*/
 public void back_to_menu()
 {
 SceneManager.LoadScene("menu"); //// teeeeeeeeeeeeeest
 }
 
-///// counter coins 
+/* counter coins 
     public TextMeshProUGUI totalcoin_level1;
     
     public void score_level_1(){
@@ -24,5 +25,5 @@ SceneManager.LoadScene("menu"); //// teeeeeeeeeeeeeest
         Debug.Log("scoor :" + total);
         total++;
     }
-    
+*/
 }
