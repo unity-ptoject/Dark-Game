@@ -9,6 +9,7 @@ TagManager:
   - slider_health_1
   - slider_health_2
   - slider_health_3
+  - coins
   layers:
   - Default
   - TransparentFX
