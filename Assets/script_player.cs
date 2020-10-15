@@ -145,7 +145,7 @@ public class script_player : MonoBehaviour
     void shot_player(){
         if (Input.GetKeyUp(KeyCode.B))
         {
-            Instantiate(bullet , fire_shot.position,fire_shot.rotation);
+            Instantiate(bullet , fire_shot.position,fire_shot.rotation); //// hna aykhdem script dyl bullet witla9 l9rtaas
         }
 
     }

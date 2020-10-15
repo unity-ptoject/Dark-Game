@@ -14,7 +14,8 @@ public class script_enemy : MonoBehaviour
     public GameObject slider_health_1;
     public GameObject slider_health_2;
     public GameObject slider_health_3;
-
+    public Transform enemy_shot;
+    public GameObject enemy_bullet;
 
    void Start()
     {
@@ -22,8 +23,8 @@ public class script_enemy : MonoBehaviour
     }
     void Update()
     {    
+        shot_enemy();
         move_enemy();
-
         ///// conter time of killer enemy       
          if(health_enemy == 0)
          {
@@ -90,16 +91,28 @@ public class script_enemy : MonoBehaviour
 
     public bool left ;
     void move_enemy(){
+
         if(left){
             transform.Translate(2 * Time.deltaTime * speed , 0,0); //// hadu katmshu biha left
             transform.localScale = new Vector2(.5f,.5f);  ///// hadu kadir lek retation mn scale ms saraha mfhmthach mzyaan 
-        }
+          }
         else{
             transform.Translate(-2 * Time.deltaTime * speed , 0,0);  ///// hadu katmshu biha right
-             transform.localScale = new Vector2(-.5f,.5f);       ///// hadu kadir lek retation mn scale ms saraha mfhmthach mzyaan 
+           transform.localScale = new Vector2(-.5f,.5f);       ///// hadu kadir lek retation mn scale ms saraha mfhmthach mzyaan 
+           }
         }
 
-     } 
+
+
+    void shot_enemy(){
+        if (Input.GetKeyUp(KeyCode.N))
+        {
+            Instantiate(enemy_bullet , enemy_shot.position,enemy_shot.rotation); //// hna aykhdem script dyl bullet_enemy witla9 l9rtaas
+        }
+
+    }
+
+
 
 
 
