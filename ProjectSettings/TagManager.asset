@@ -11,6 +11,8 @@ TagManager:
   - slider_health_3
   - coins
   - flowers
+  - enemy_shot
+  - enemy_bullet
   layers:
   - Default
   - TransparentFX

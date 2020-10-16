@@ -24,7 +24,7 @@ public class script_enemy_bullet : MonoBehaviour
         }
     }
 
-    public float timeRemaining = 1;
+    public float timeRemaining = 2;
 
     void Update()
     {

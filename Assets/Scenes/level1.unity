@@ -3148,7 +3148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.5, y: 0, z: -10}
+  m_LocalPosition: {x: 34.31, y: -0.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5627,8 +5627,13 @@ MonoBehaviour:
   slider_health_1: {fileID: 967844659}
   slider_health_2: {fileID: 1239199476}
   slider_health_3: {fileID: 136434854}
+  enemy_shot: {fileID: 0}
+  enemy_bullet: {fileID: 0}
   speed: 0.5
   left: 0
+  move: 0
+  shot: 0
+  timing_shot: 0
 --- !u!1 &1041420096
 GameObject:
   m_ObjectHideFlags: 0
@@ -12465,6 +12470,36 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.00000047683716}
   serializedVersion: 2
   m_Radius: 0.54
+--- !u!1 &1936399429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936399430}
+  m_Layer: 0
+  m_Name: enemy_shot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936399430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936399429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.28, y: -0.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2029157461}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1941536136
 GameObject:
   m_ObjectHideFlags: 0
@@ -13237,8 +13272,13 @@ MonoBehaviour:
   slider_health_1: {fileID: 512712563}
   slider_health_2: {fileID: 1068720848}
   slider_health_3: {fileID: 647196594}
+  enemy_shot: {fileID: 0}
+  enemy_bullet: {fileID: 0}
   speed: 0.5
   left: 0
+  move: 0
+  shot: 0
+  timing_shot: 0
 --- !u!1 &2029157459
 GameObject:
   m_ObjectHideFlags: 0
@@ -13318,12 +13358,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029157459}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -10.27, y: 1.83, z: 98.3125}
+  m_LocalPosition: {x: -10.27, y: 1.775, z: 98.3125}
   m_LocalScale: {x: 0.55348283, y: 0.43248308, z: 1}
   m_Children:
   - {fileID: 819249056}
   - {fileID: 246016832}
   - {fileID: 1746552367}
+  - {fileID: 1936399430}
   m_Father: {fileID: 1604217216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -13488,12 +13529,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health_enemy: 3
-  timing_death_enemy: 0.2
+  timing_death_enemy: 0.3
   slider_health_1: {fileID: 819249055}
   slider_health_2: {fileID: 246016831}
   slider_health_3: {fileID: 1746552366}
-  speed: 0.5
+  enemy_shot: {fileID: 1936399430}
+  enemy_bullet: {fileID: 2706829593334705898, guid: 32d4f6113f1d63144a5a08617ad324b1,
+    type: 3}
+  speed: 0.8
   left: 0
+  move: 0
+  shot: 1
+  timing_shot: 0
 --- !u!1 &2055154034
 GameObject:
   m_ObjectHideFlags: 0
