@@ -158,4 +158,43 @@ public class script_player : MonoBehaviour
 
         transform.Rotate(0f, 180f, 0);  /// this function will change the rotation to 180f if click in left arrow or right arrow
     }
+
+    public int health_player = 3;
+    
+    public GameObject player_health_1;
+    public GameObject player_health_2;
+    public GameObject player_health_3;
+        void OnTriggerEnter2D(Collider2D other) 
+    {
+
+        if (other.gameObject.tag == "bullet_enemy") 
+        {
+            health_player--;
+            Destroy(other.gameObject);
+            if(health_player > 0)
+            {
+                health_player--;
+
+                if(health_player == 2)
+                {
+                    Debug.Log("enemy dead " + health_player );
+
+                    player_health_2.SetActive(true);
+                    player_health_1.SetActive(false);
+                }
+
+                if(health_player == 1)
+                {
+                    Debug.Log("enemy dead " + health_player );
+                    player_health_3.SetActive(true);  
+                    player_health_2.SetActive(false);
+                }        
+            }
+            if(health_player == 0)
+            {
+                anime.Play("isdeath"); 
+                //Destroy(gameObject);
+            }
+        }
+    }
 }

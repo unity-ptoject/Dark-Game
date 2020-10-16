@@ -14,6 +14,12 @@ public class script_enemys : MonoBehaviour
     public GameObject slider_health_3;
     public Transform enemy_shot;
     public GameObject enemy_bullet;
+    public float speed = 0.5f;
+    public bool left ;
+    public bool move;
+    public bool shot = true;
+    public float timing_shot = 0f;
+
    void Start()
     {
        anime = GetComponent<Animator>();
@@ -87,10 +93,7 @@ public class script_enemys : MonoBehaviour
 
     }
 
-    public float speed = 0.5f;
-    public bool left ;
-    public bool move;
-    public bool shot = true;
+
     void move_enemy(){
         if(move){
             if(left){
@@ -112,7 +115,6 @@ public class script_enemys : MonoBehaviour
         }
 
 
-    public float timing_shot = 0f;
    void timing_enemy_shot(){
             timing_shot += Time.deltaTime;  ////// timer counterdownd
             Debug.Log("timer_shot : " + timing_shot); 
@@ -121,7 +123,7 @@ public class script_enemys : MonoBehaviour
                 if(shot){
                     anime.Play("blueisatack"); 
                     move = false;
-                    if(timing_shot > 1.63f && timing_shot < 1.69f){
+                    if(timing_shot > 1.63f && timing_shot < 1.65f){
                      Instantiate(enemy_bullet , enemy_shot.position,enemy_shot.rotation); //// script bullet_enemy
                     }
                  /*   if(timing_shot > 3.3f && timing_shot < 3.315f){
