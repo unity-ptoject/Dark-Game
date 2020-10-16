@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-public class script_enemys : MonoBehaviour
+public class script_enemyz : MonoBehaviour
 {   private Animator anime;
     public int health_enemy = 3; //// health slider bar dyl enemy
     public float timing_death_enemy = 0.3f; /// dk le temp lighybqa dk lghobar dyalo apres madrb b bullet 3
@@ -93,7 +93,6 @@ public class script_enemys : MonoBehaviour
 
     }
 
-
     void move_enemy(){
         if(move){
             if(left){
@@ -113,23 +112,29 @@ public class script_enemys : MonoBehaviour
             //shot = false;
         }
         }
+        
+        void bullet_tire()
+        {
+            Instantiate(enemy_bullet , enemy_shot.position,enemy_shot.rotation); //// script bullet_enemy
+        }
+
+
 
 
    void timing_enemy_shot(){
             timing_shot += Time.deltaTime;  ////// timer counterdownd
             Debug.Log("timer_shot : " + timing_shot); 
+            
            if(timing_shot > 1f)
             {
                 if(shot){
                     anime.Play("blueisatack"); 
                     move = false;
-                    if(timing_shot > 1.63f && timing_shot < 1.65f){
-                     Instantiate(enemy_bullet , enemy_shot.position,enemy_shot.rotation); //// script bullet_enemy
-                    }
-                 /*   if(timing_shot > 3.3f && timing_shot < 3.315f){
-                     Instantiate(enemy_bullet , enemy_shot.position,enemy_shot.rotation); //// script bullet_enemy
-                    }
-                */
+                  if(timing_shot > 1.30f && timing_shot < 1.305f )
+                  {
+                      bullet_tire();
+                  }
+
                 }
             }
             if(timing_shot > 2f)
@@ -137,19 +142,7 @@ public class script_enemys : MonoBehaviour
                 move = true;
                 timing_shot = 0;
              }
+             
         }
-/*
-    void shot_enemy(){
-        if (Input.GetKeyUp(KeyCode.N))
-        {
-            Instantiate(enemy_bullet , enemy_shot.position,enemy_shot.rotation); //// hna aykhdem script dyl bullet_enemy witla9 l9rtaas
-            //anime.Play("blueisatack"); 
-        }
-
-    }
-
-*/
-
-
 
 }

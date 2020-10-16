@@ -13,6 +13,10 @@ TagManager:
   - flowers
   - enemy_shot
   - enemy_bullet
+  - bullet_enemy
+  - player_health_1
+  - player_health_2
+  - player_health_3
   layers:
   - Default
   - TransparentFX

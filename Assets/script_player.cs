@@ -18,6 +18,7 @@ public class script_player : MonoBehaviour
             private bool faceLeft = true;
             public Transform fire_shot;
             public GameObject bullet;
+            public float timing_death_player = 0.7f;  //timing will be player death 
     void Start()
     {
        anime = GetComponent<Animator>();
@@ -29,6 +30,19 @@ public class script_player : MonoBehaviour
             run_right();
             jump_player();
             shot_player();
+        if(health_player == 0)
+         {
+                if (timing_death_player > 0)
+                {
+                    timing_death_player -= Time.deltaTime;  ////// timer counterdownd
+                    Debug.Log("itimer : " + timing_death_player); 
+                }
+                if (timing_death_player <= 0)                  ///// if timer == 0  the enenmy will be destroy
+                {
+                    Destroy(gameObject);                  
+                    Debug.Log("db ikhtafaaaaa");
+                }
+         }
     }
 
 
@@ -188,6 +202,7 @@ public class script_player : MonoBehaviour
                     Debug.Log("enemy dead " + health_player );
                     player_health_3.SetActive(true);  
                     player_health_2.SetActive(false);
+                     player_health_1.SetActive(false);
                 }        
             }
             if(health_player == 0)
