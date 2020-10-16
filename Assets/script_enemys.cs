@@ -1,14 +1,12 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-
-public class script_enemy : MonoBehaviour
-{
-    private Animator anime;
+public class script_enemys : MonoBehaviour
+{   private Animator anime;
     public int health_enemy = 3; //// health slider bar dyl enemy
     public float timing_death_enemy = 0.3f; /// dk le temp lighybqa dk lghobar dyalo apres madrb b bullet 3
     public GameObject slider_health_1;
@@ -123,7 +121,7 @@ public class script_enemy : MonoBehaviour
                 if(shot){
                     anime.Play("blueisatack"); 
                     move = false;
-                    if(timing_shot > 1.63f && timing_shot < 1.8f){
+                    if(timing_shot > 1.63f && timing_shot < 1.69f){
                      Instantiate(enemy_bullet , enemy_shot.position,enemy_shot.rotation); //// script bullet_enemy
                     }
                  /*   if(timing_shot > 3.3f && timing_shot < 3.315f){
@@ -149,7 +147,6 @@ public class script_enemy : MonoBehaviour
     }
 
 */
-
 
 
 

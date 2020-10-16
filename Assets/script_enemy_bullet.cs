@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class script_enemy_bullet : MonoBehaviour
 {
-    public float speed = 11f;
+    public float speed = 6f;
     public Rigidbody2D rb;
     void Start()
     {
