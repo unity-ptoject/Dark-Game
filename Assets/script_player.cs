@@ -19,6 +19,8 @@ public class script_player : MonoBehaviour
             public Transform fire_shot;
             public GameObject bullet;
             public float timing_death_player = 0.7f;  //timing will be player death 
+            public GameObject gameover;
+
     void Start()
     {
        anime = GetComponent<Animator>();
@@ -41,6 +43,7 @@ public class script_player : MonoBehaviour
                 {
                     Destroy(gameObject);                  
                     Debug.Log("db ikhtafaaaaa");
+                    gameover.SetActive(true);  
                 }
          }
     }
