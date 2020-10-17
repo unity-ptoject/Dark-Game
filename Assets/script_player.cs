@@ -12,7 +12,7 @@ public class script_player : MonoBehaviour
     //// declaration des variable movement
 
             public int moveSpeed = 2;
-            public int jumpHeight = 5;
+            public float jumpHeight = 5.5;
             private Animator anime;
             private bool isjumping = true;
             private bool faceLeft = true;
@@ -184,6 +184,10 @@ public class script_player : MonoBehaviour
            {
                 Debug.Log(" 9aast obstaacl"); 
                 anime.Play("isdeath"); 
+                 Debug.Log("enemy dead " + health_player );
+                player_health_3.SetActive(true);  
+                   player_health_2.SetActive(false);
+                 player_health_1.SetActive(false);
                 health_player = 0;
            } 
         
