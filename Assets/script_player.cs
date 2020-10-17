@@ -12,7 +12,7 @@ public class script_player : MonoBehaviour
     //// declaration des variable movement
 
             public int moveSpeed = 2;
-            public float jumpHeight = 5.2f;
+            public float jumpHeight = 5.5f;
             private Animator anime;
             private bool isjumping = true;
             private bool faceLeft = true;
