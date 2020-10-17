@@ -17,6 +17,7 @@ TagManager:
   - player_health_1
   - player_health_2
   - player_health_3
+  - obstacl
   layers:
   - Default
   - TransparentFX

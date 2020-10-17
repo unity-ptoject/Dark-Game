@@ -6,8 +6,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System;
-public class script_enemyz : MonoBehaviour
-{  
+
+public class script_orange_enemy : MonoBehaviour
+{
+  
      private Animator anime;
     public int health_enemy = 3; //// health slider bar dyl enemy
     public float timing_death_enemy = 0.3f; /// dk le temp lighybqa dk lghobar dyalo apres madrb b bullet 3
@@ -28,7 +30,7 @@ public class script_enemyz : MonoBehaviour
     }
     void Update()
     {    
-         move_enemy();
+        move_enemy();
         timing_enemy_shot();
         ///// conter time of killer enemy       
          if(health_enemy == 0)
@@ -98,14 +100,14 @@ public class script_enemyz : MonoBehaviour
     void move_enemy(){
         if(move){
             if(left){
-                anime.Play("blueiswalk"); 
+                anime.Play("rediswalk"); 
                 transform.position += (Vector3.left * speed * Time.deltaTime); //// for running left
                 //transform.Translate(2 * Time.deltaTime * speed , 0,0); //// hadu katmshu biha left
                 //transform.localScale = new Vector2(.5f,.5f);  ///// hadu kadir lek retation mn scale ms saraha mfhmthach mzyaan 
                 transform.eulerAngles = new Vector3 (0, -180 ,0); 
             }
             else{
-                anime.Play("blueiswalk"); 
+                anime.Play("rediswalk"); 
                 transform.position -= (Vector3.left * speed * Time.deltaTime);   //// for running left
                 //transform.Translate(-2 * Time.deltaTime * speed , 0,0);  ///// hadu katmshu biha right
             //transform.localScale = new Vector2(-.5f,.5f);       ///// hadu kadir lek retation mn scale ms saraha mfhmthach mzyaan 
@@ -126,17 +128,17 @@ public class script_enemyz : MonoBehaviour
            if(timing_shot > 1f)
             {
                 if(shot){
-                    anime.Play("blueisatack"); 
+                    anime.Play("redisatack"); 
                     move = false;
-                        if(timing_shot > 1.200f && timing_shot < 1.209f )
-                        {
-                            bullet_tire();
-                        }
-                        if(timing_shot > 1.300f && timing_shot < 1.309f )
-                        {
-                            bullet_tire();
-                        }
                         if(timing_shot > 1.400f && timing_shot < 1.409f )
+                        {
+                            bullet_tire();
+                        }
+                        if(timing_shot > 1.500f && timing_shot < 1.509f )
+                        {
+                            bullet_tire();
+                        }
+                        if(timing_shot > 1.600f && timing_shot < 1.609f )
                         {
                             bullet_tire();
                         }
@@ -149,5 +151,4 @@ public class script_enemyz : MonoBehaviour
              }
              
         }
-
 }

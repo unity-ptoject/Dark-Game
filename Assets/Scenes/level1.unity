@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 136434856}
   m_Layer: 0
   m_Name: slider_healt_3
-  m_TagString: slider_health_3
+  m_TagString: player_health_3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3229,7 +3229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.31, y: -0.2, z: -10}
+  m_LocalPosition: {x: 54.84, y: -0.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3329,7 +3329,7 @@ GameObject:
   - component: {fileID: 588638422}
   m_Layer: 0
   m_Name: spikes1 (1)
-  m_TagString: Untagged
+  m_TagString: obstacl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5312,7 +5312,7 @@ GameObject:
   - component: {fileID: 967844661}
   m_Layer: 0
   m_Name: slider_healt_1
-  m_TagString: Untagged
+  m_TagString: player_health_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5628,11 +5628,11 @@ GameObject:
   - component: {fileID: 1036631112}
   - component: {fileID: 1036631111}
   - component: {fileID: 1036631114}
-  - component: {fileID: 1036631113}
   - component: {fileID: 1036631115}
   - component: {fileID: 1036631116}
+  - component: {fileID: 1036631113}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: red_enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5696,12 +5696,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036631110}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 6.6838913, y: 2.7429907, z: 98.3125}
+  m_LocalPosition: {x: 3.63, y: 2.7429907, z: 98.3125}
   m_LocalScale: {x: 0.5534, y: 0.4324, z: 1}
   m_Children:
   - {fileID: 967844660}
   - {fileID: 1239199477}
   - {fileID: 136434855}
+  - {fileID: 2088379336}
   m_Father: {fileID: 1604217216}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -5720,11 +5721,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &1036631114
 PolygonCollider2D:
@@ -5862,9 +5863,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1036631110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaafedd697ea53341b351735487b2984, type: 3}
+  m_Script: {fileID: 11500000, guid: ee21945a6551e6a4882f54112053a8ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health_enemy: 3
+  timing_death_enemy: 0.3
+  slider_health_1: {fileID: 967844659}
+  slider_health_2: {fileID: 1239199476}
+  slider_health_3: {fileID: 136434854}
+  enemy_shot: {fileID: 2088379336}
+  enemy_bullet: {fileID: 2706829593334705898, guid: 32d4f6113f1d63144a5a08617ad324b1,
+    type: 3}
+  speed: 0.5
+  left: 0
+  move: 0
+  shot: 1
+  timing_shot: 0
 --- !u!1 &1041420096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5986,7 +6000,7 @@ GameObject:
   - component: {fileID: 1065870722}
   m_Layer: 0
   m_Name: spikes1
-  m_TagString: Untagged
+  m_TagString: obstacl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7265,7 +7279,7 @@ GameObject:
   - component: {fileID: 1239199478}
   m_Layer: 0
   m_Name: slider_healt_2
-  m_TagString: slider_health_2
+  m_TagString: player_health_2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9850,6 +9864,36 @@ Transform:
   m_Father: {fileID: 307013509}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1611220476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611220477}
+  m_Layer: 0
+  m_Name: enemy_shot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1611220477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611220476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.15, y: -0.482, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2012384345}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1616839151
 GameObject:
   m_ObjectHideFlags: 0
@@ -11886,7 +11930,7 @@ GameObject:
   - component: {fileID: 1859774862}
   m_Layer: 0
   m_Name: spikes2 (2)
-  m_TagString: Untagged
+  m_TagString: obstacl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12725,7 +12769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936399429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.28, y: -0.63, z: 0}
+  m_LocalPosition: {x: 1.17, y: -0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2029157461}
@@ -12954,7 +12998,7 @@ GameObject:
   - component: {fileID: 1966916483}
   m_Layer: 0
   m_Name: spikes2 (1)
-  m_TagString: Untagged
+  m_TagString: obstacl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13261,11 +13305,12 @@ GameObject:
   - component: {fileID: 2012384345}
   - component: {fileID: 2012384344}
   - component: {fileID: 2012384347}
-  - component: {fileID: 2012384346}
   - component: {fileID: 2012384348}
   - component: {fileID: 2012384349}
+  - component: {fileID: 2012384350}
+  - component: {fileID: 2012384346}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: green_enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13329,12 +13374,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012384343}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 30.013893, y: 3.6939907, z: 98.3125}
+  m_LocalPosition: {x: 27.58, y: 3.6939907, z: 98.3125}
   m_LocalScale: {x: 0.5534, y: 0.4324, z: 1}
   m_Children:
   - {fileID: 512712564}
   - {fileID: 1068720849}
   - {fileID: 647196595}
+  - {fileID: 1611220477}
   m_Father: {fileID: 1604217216}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -13353,11 +13399,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &2012384347
 PolygonCollider2D:
@@ -13498,6 +13544,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaafedd697ea53341b351735487b2984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2012384350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012384343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c50513cec4bbf4995a75a960ea1342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health_enemy: 3
+  timing_death_enemy: 0.3
+  slider_health_1: {fileID: 512712563}
+  slider_health_2: {fileID: 1068720848}
+  slider_health_3: {fileID: 647196594}
+  enemy_shot: {fileID: 1611220477}
+  enemy_bullet: {fileID: 2706829593334705898, guid: 32d4f6113f1d63144a5a08617ad324b1,
+    type: 3}
+  speed: 0.5
+  left: 0
+  move: 0
+  shot: 1
+  timing_shot: 0
 --- !u!1 &2029157459
 GameObject:
   m_ObjectHideFlags: 0
@@ -13509,11 +13580,11 @@ GameObject:
   - component: {fileID: 2029157461}
   - component: {fileID: 2029157460}
   - component: {fileID: 2029157463}
-  - component: {fileID: 2029157462}
   - component: {fileID: 2029157464}
   - component: {fileID: 2029157465}
+  - component: {fileID: 2029157462}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: blue_enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13577,7 +13648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029157459}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -10.27, y: 1.775, z: 98.3125}
+  m_LocalPosition: {x: -9.43, y: 1.775, z: 98.3125}
   m_LocalScale: {x: 0.55348283, y: 0.43248308, z: 1}
   m_Children:
   - {fileID: 819249056}
@@ -13602,11 +13673,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &2029157463
 PolygonCollider2D:
@@ -14294,6 +14365,36 @@ CircleCollider2D:
   m_Offset: {x: 0.0000076293945, y: 0.000000029802322}
   serializedVersion: 2
   m_Radius: 0.54
+--- !u!1 &2088379335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088379336}
+  m_Layer: 0
+  m_Name: enemy_shot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2088379336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088379335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.147, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036631112}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095885101
 GameObject:
   m_ObjectHideFlags: 0
@@ -15010,7 +15111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122173676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.1, y: -1.55, z: 0}
+  m_LocalPosition: {x: 9.86, y: -1.49, z: 0}
   m_LocalScale: {x: 0.5895, y: 0.5812, z: 1}
   m_Children:
   - {fileID: 1822985068}

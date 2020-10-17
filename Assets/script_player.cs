@@ -180,10 +180,15 @@ public class script_player : MonoBehaviour
     public GameObject player_health_3;
         void OnTriggerEnter2D(Collider2D other) 
     {
-
+        if (other.gameObject.tag == "obstacl")
+           {
+                Debug.Log(" 9aast obstaacl"); 
+                anime.Play("isdeath"); 
+                health_player = 0;
+           } 
+        
         if (other.gameObject.tag == "bullet_enemy") 
         {
-            health_player--;
             Destroy(other.gameObject);
             if(health_player > 0)
             {

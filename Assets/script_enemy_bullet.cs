@@ -31,12 +31,12 @@ public class script_enemy_bullet : MonoBehaviour
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;  ////// timer counterdownd
-            Debug.Log("itimer : " + timeRemaining); 
+            //Debug.Log("itimer : " + timeRemaining); 
         }
         if (timeRemaining <= 0)                  ///// if timer == 0  the bullets will be destroy
         {
              Destroy(gameObject);                  
-            Debug.Log("bullet is distroy withot touch player");
+           // Debug.Log("bullet is distroy withot touch player");
         }
     }
 }
