@@ -40,29 +40,34 @@ public void resume_button(){
 }
 
 
+
+
     public float timing_counter = 0f;  //timing will be player death 
     public bool timing_321 = false;
-    public GameObject start_game;
-    public void down_start(){
-        if(timing_321){
-            timing_counter += Time.deltaTime;
-            Debug.Log("timir start: " + timing_counter); 
-            counter_start.SetActive(true);
+
+
+   public void down_start(){
+       if(timing_321){
+        timing_counter += Time.deltaTime;  ////// timer counterdownd
+        Debug.Log("timer_shot : " + timing_counter);   
+        counter_start.SetActive(true);
+       }
+      if(timing_counter >  0.004f){
+            Time.timeScale = 1f;
+            counter_start.SetActive(false);
+            timing_counter = 0f;
             timing_321 = false;
-        }
+       }
     }
+
 
     public void timing_to_start(){
-        Time.timeScale = 1f;
-        timing_321 = true;
-        start_game.SetActive(false);
-
-   //     timing_counter += Time.deltaTime;
-     //    Debug.Log("timir start: " + timing_counter); 
-       // if( timing_counter >10f)
-        //{
-       // }
+        Time.timeScale = 0.001f;
+       timing_321 = true;
+        //start_game.SetActive(false);
     }
+
+
 
 /* counter coins 
     public TextMeshProUGUI totalcoin_level1;

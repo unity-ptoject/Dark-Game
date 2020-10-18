@@ -4881,7 +4881,6 @@ MonoBehaviour:
   counter_start: {fileID: 0}
   timing_counter: 0
   timing_321: 0
-  start_game: {fileID: 0}
 --- !u!1 &819249055
 GameObject:
   m_ObjectHideFlags: 0
@@ -5540,7 +5539,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1949754650}
         m_MethodName: pause_button
         m_Mode: 1
         m_Arguments:
@@ -9100,7 +9099,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1949754650}
         m_MethodName: ads_button
         m_Mode: 1
         m_Arguments:
@@ -9879,8 +9878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 111}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 12, y: 32}
+  m_SizeDelta: {x: 250, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1353914618
 Animator:
@@ -11208,6 +11207,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1483755628}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1483755631
 MonoBehaviour:
@@ -12629,9 +12639,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1480627842}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1949754650}
+        m_MethodName: resume_button
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12640,9 +12650,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: resume_button
-        m_Mode: 1
+      - m_Target: {fileID: 1480627842}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15078,7 +15088,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1949754650}
         m_MethodName: back_to_menu
         m_Mode: 1
         m_Arguments:
@@ -15818,10 +15828,9 @@ MonoBehaviour:
   totalcoin_menu: {fileID: 0}
   total: 0
   Pause_UI: {fileID: 1480627842}
-  counter_start: {fileID: 1483755628}
+  counter_start: {fileID: 1353914616}
   timing_counter: 0
   timing_321: 0
-  start_game: {fileID: 1483755628}
 --- !u!1 &1981179449
 GameObject:
   m_ObjectHideFlags: 0

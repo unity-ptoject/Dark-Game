@@ -2843,6 +2843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757836623}
   - component: {fileID: 757836624}
+  - component: {fileID: 757836625}
   m_Layer: 5
   m_Name: menu-1
   m_TagString: Untagged
@@ -2888,6 +2889,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalcoin_menu: {fileID: 475323034}
+  total: 0
+--- !u!114 &757836625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757836622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3090bbe73ebec42811a661ba387013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalcoin_menu: {fileID: 0}
   total: 0
 --- !u!1 &773991336
 GameObject:
@@ -4047,8 +4062,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1152849318}
-        m_MethodName: resume_button
+      - m_Target: {fileID: 757836624}
+        m_MethodName: playgame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4110,6 +4125,9 @@ MonoBehaviour:
   totalcoin_menu: {fileID: 0}
   total: 0
   Pause_UI: {fileID: 0}
+  counter_start: {fileID: 0}
+  timing_counter: 0
+  timing_321: 0
 --- !u!1 &1198773972
 GameObject:
   m_ObjectHideFlags: 0
